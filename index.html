@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sex — live human dashboard</title>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Sex</div>
+    <nav class="tabs" role="tablist" aria-label="Main tabs">
+      <button class="tab active" data-tab="babies">Babies Born</button>
+      <button class="tab" data-tab="condoms">Condom Prices</button>
+      <button class="tab" data-tab="women">Number of Women</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Babies -->
+    <section id="babies" class="panel active" role="tabpanel">
+      <div class="panel-top">
+        <div class="big-counter" id="babies-counter">0</div>
+        <div class="controls">
+          <button id="babies-pause">Pause</button>
+          <button id="babies-reset">Reset</button>
+        </div>
+      </div>
+      <canvas id="babies-chart"></canvas>
+    </section>
+
+    <!-- Condoms -->
+    <section id="condoms" class="panel" role="tabpanel" aria-hidden="true">
+      <div class="panel-top">
+        <div class="big-counter" id="condoms-counter">$0.00</div>
+        <div class="controls">
+          <button id="condoms-pause">Pause</button>
+          <button id="condoms-reset">Reset</button>
+        </div>
+      </div>
+      <canvas id="condoms-chart"></canvas>
+    </section>
+
+    <!-- Women -->
+    <section id="women" class="panel" role="tabpanel" aria-hidden="true">
+      <div class="panel-top">
+        <div class="big-counter" id="women-counter">0</div>
+        <div class="controls">
+          <button id="women-pause">Pause</button>
+          <button id="women-reset">Reset</button>
+        </div>
+      </div>
+      <canvas id="women-chart"></canvas>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Live simulated data • Charts update every second • Built with Chart.js</small>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
